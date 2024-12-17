@@ -36,8 +36,8 @@ const CustomButton = ({
   title,
   bgVariant = 'primary',
   textVariant = 'default',
-  iconLeft,
-  iconRight,
+  IconLeft,
+  IconRight,
   className,
   ...props
 }: ButtonProps) => (
@@ -46,11 +46,11 @@ const CustomButton = ({
     className={`w-full p-3 rounded-full flex flex-row justify-center items-center shadow-md shadow-neutral-400/70 ${getBgVariantStyle(bgVariant)} ${className}`}
     {...props}
   >
-    {iconLeft && <IconLeft />}
+    {IconLeft && <IconLeft />}
     <Text className={`text-lg font-bold ${getTextVariantStyle(textVariant)}`}>
       {title}
     </Text>
-    {iconRight && <IconRight />}
+    {IconRight && <IconRight />}
   </TouchableOpacity>
 );
 
