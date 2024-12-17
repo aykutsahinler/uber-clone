@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
-
 import Swiper from 'react-native-swiper';
 import { onboarding } from '@/constants';
 import CustomButton from '@/components/CustomButton';
@@ -25,8 +24,12 @@ const Onboarding = () => {
       <Swiper
         ref={swiperRef}
         loop={false}
-        dot={<View className="w-[32px] mx-1 bg-[#E2E8F0]" />}
-        activeDot={<View className="w-[32px] mx-1 bg-[#0286FF] rounded-full" />}
+        dot={
+          <View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0] rounded-full" />
+        }
+        activeDot={
+          <View className="w-[32px] h-[4px] mx-1 bg-[#0286FF] rounded-full" />
+        }
         onIndexChanged={(index) => setActiveIndex(index)}
       >
         {onboarding.map((item) => (

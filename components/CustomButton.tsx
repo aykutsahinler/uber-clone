@@ -28,7 +28,7 @@ const getTextVariantStyle = (variant: ButtonProps['text']) => {
       return 'text-green-100';
 
     default:
-      return 'bg-[#0286ff]';
+      return 'bg-[##0286FF]';
   }
 };
 
